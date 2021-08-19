@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Maze Generator</title>
+    <!-- how to add little icon at top? -->
+</head>
+
+
+<body>
+    <h1 class="title is-size-1 center">Maze Generator</h1>
+    <h3 class="subtitle is-3 center">Choose your favorite maze generating algorithm!</h3>
+
+    <canvas id="myCanvas"></canvas>
+
+
+    <footer>
+        <div class="container center">
+            <div class>
+                <button id="binaryTree" class="button">Binary Tree</button>
+                <button id="sideWinder" class="button">Side Winder</button>
+                <button id="recursiveDFS" class="button">Recursive DFS</button>
+                <button id="AldousBroder" class="button">Aldous Broder</button>
+            </div>
+            <div>
+                <button id="Wilsons" class="button">Loop-Erased Random Walk</button>
+                <button id="huntAndKill" class="button">Hunt and Kill</button>
+                <button id="algo7" class="button">seven</button>
+                <button id="algo8" class="button">eight</button>
+                <!-- 
+                // Wilson's
+                // hunt and kill
+                // Kruskal's
+                // Prim's 
+                // Eller's 
+                // Recursive Division 
+                -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="maze.js"></script>
+    <script src="setup.js"></script>
+    <script src="util.js"></script>
+    <script src="algorithms.js"></script>
+    <script src="colorInDifficulty.js"></script>
+</body>
+
+</html>

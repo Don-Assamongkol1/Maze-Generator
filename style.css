@@ -1,0 +1,31 @@
+
+
+.title {
+    margin: auto;
+    color: #000000;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    text-align:center;
+}
+
+#myCanvas {
+    margin: auto;
+    display: block;
+    border-style: solid;
+    color: black;
+}
+
+
+/* #myCanvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 600px;
+    height: 600px;
+    border-style: solid;
+} */
