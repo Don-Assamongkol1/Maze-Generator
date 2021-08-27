@@ -31,7 +31,7 @@ async function runBinaryTree() {
   }
   myMaze.draw();
 
-  assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
+  await assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
 }
 
 // sidewinder from bottom left to top righti.e. decide whether to carve east or south
@@ -76,7 +76,7 @@ async function runSideWinder() {
     }
   }
   myMaze.draw();
-  assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
+  await assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
 }
 
 //
@@ -102,7 +102,7 @@ async function runRecursiveDFS() {
     await new Promise((r) => setTimeout(r, timeDelay));
   }
   myMaze.draw();
-  assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
+  await assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
 }
 
 //
@@ -117,7 +117,7 @@ async function runAldousBroder() {
 
   while (totalNotVisited > 0) {
     currentCell.visitedByMazeGenerator = true;
-
+    currentCell.visited = true;
     neighbors = getNeighbors(currentCell, false, false, false);
     nextCell = getRandomCellFromArray(neighbors);
 
@@ -131,8 +131,9 @@ async function runAldousBroder() {
     currentCell = nextCell;
     await new Promise((r) => setTimeout(r, superFastTimeDelay));
   }
+  currentCell.visited = true;
   myMaze.draw();
-  assignDistanceFromStart(myMaze.grid[startRow][startColumn]);
+  await assignDistanceFromStart(myMaze.grid[startRow][startColumn]);
 }
 
 //
@@ -188,7 +189,7 @@ async function runWilsons() {
   await new Promise((r) => setTimeout(r, timeDelay));
   myMaze.draw();
 
-  assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
+  await assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
 }
 
 //
@@ -230,5 +231,5 @@ async function runHuntAndKill() {
   await new Promise((r) => setTimeout(r, timeDelay));
   myMaze.draw();
 
-  assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
+  await assignDistanceFromStart(myMaze.grid[myMaze.numCells - 1][0]);
 }

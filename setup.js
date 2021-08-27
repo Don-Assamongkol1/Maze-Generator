@@ -44,20 +44,20 @@ async function executeMazeGeneration(algorithmId) {
 
   if (algorithmId === "#binaryTree") {
     // bunch of if statements to get the given algo to run
-    runBinaryTree();
+    await runBinaryTree();
   } else if (algorithmId === "#sideWinder") {
-    runSideWinder();
+    await runSideWinder();
   } else if (algorithmId === "#recursiveDFS") {
-    runRecursiveDFS();
+    await runRecursiveDFS();
   } else if (algorithmId === "#AldousBroder") {
-    runAldousBroder();
+    await runAldousBroder();
   } else if (algorithmId === "#Wilsons") {
-    runWilsons();
+    await runWilsons();
   } else if (algorithmId === "#huntAndKill") {
-    runHuntAndKill();
+    await runHuntAndKill();
   }
 
-  await new Promise((r) => setTimeout(r, timeDelay * myMaze.numCells * myMaze.numCells));
+  // await new Promise((r) => setTimeout(r, timeDelay * myMaze.numCells * myMaze.numCells));
 
   resetButtons();
 }
